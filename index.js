@@ -35,6 +35,19 @@ app.use(helmet());
   }
 })();
 
+// Product Routes
+const allProductsRoute = require('./api/product/allProducts');
+app.use('/api/product', allProductsRoute);
+const newProductRoute = require('./api/product/newProduct');
+app.use('/api/product', newProductRoute);
+
+// Shipment Routes
+const allShipmentsRoute = require('./api/shipment/allShipments');
+app.use('/api/shipment', allShipmentsRoute);
+
+const newShipmentRoute = require('./api/shipment/newShipment');
+app.use('/api/shipment', newShipmentRoute);
+
 // ON FIRE
 app.listen(process.env.PORT, () => {
   console.log(`Server Running!`);
