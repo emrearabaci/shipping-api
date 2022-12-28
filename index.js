@@ -40,13 +40,16 @@ const allProductsRoute = require('./api/product/allProducts');
 app.use('/api/product', allProductsRoute);
 const newProductRoute = require('./api/product/newProduct');
 app.use('/api/product', newProductRoute);
+const searchProductRoute = require('./api/product/searchProduct');
+app.use('/api/product', searchProductRoute);
 
 // Shipment Routes
 const allShipmentsRoute = require('./api/shipment/allShipments');
 app.use('/api/shipment', allShipmentsRoute);
-
 const newShipmentRoute = require('./api/shipment/newShipment');
 app.use('/api/shipment', newShipmentRoute);
+const searchShipmentRoute = require('./api/shipment/searchShipment');
+app.use('/api/shipment', searchShipmentRoute);
 
 // ON FIRE
 app.listen(process.env.PORT, () => {

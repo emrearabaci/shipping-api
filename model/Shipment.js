@@ -1,6 +1,19 @@
 const mongoose = require('mongoose');
 
 const shipmentSchema = new mongoose.Schema({
+  shipmentCode: {
+    type: String,
+    minLength: [
+      12,
+      'The length of "Shipment Code" must be at least 12 characters.'
+    ],
+    maxLength: [
+      14,
+      'The length of "Shipment Code" must be a maximum of 14 characters.'
+    ],
+    unique: true,
+    required: [true, '"Shipment Code" field is required.']
+  },
   productCode: {
     type: String,
     minLength: [
