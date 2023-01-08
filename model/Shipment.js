@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const shipmentSchema = new mongoose.Schema({
+  productInfo: {
+    type: Array,
+    required: [true, '"Product Info" is required.']
+  },
   shipmentCode: {
     type: String,
     minLength: [
@@ -13,19 +17,6 @@ const shipmentSchema = new mongoose.Schema({
     ],
     unique: true,
     required: [true, '"Shipment Code" field is required.']
-  },
-  productCode: {
-    type: String,
-    minLength: [
-      3,
-      'The length of "product code" must be at least 3 characters.'
-    ],
-    maxLength: [
-      64,
-      'The length of your first name must be a maximum of 64 characters.'
-    ],
-    uppercase: true,
-    required: [true, '"Product Code" field is required.']
   },
   shipmentQuantity: {
     type: Number,
@@ -69,7 +60,7 @@ const shipmentSchema = new mongoose.Schema({
   },
   shipmentStatus: {
     type: String,
-    default: 'q'
+    default: 'raw'
   },
   shipmentCreator: {
     type: String,
