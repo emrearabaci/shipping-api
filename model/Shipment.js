@@ -22,10 +22,6 @@ const shipmentSchema = new mongoose.Schema({
     type: Number,
     required: [true, '"Product Quantity" field is required.']
   },
-  shipmentUnitPrice: {
-    type: Number,
-    required: [true, '"Unit Price" field is required.']
-  },
   shipmentFrom: {
     type: String,
     required: [true, '"Shipment From" field is required.']
