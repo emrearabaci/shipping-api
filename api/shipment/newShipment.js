@@ -5,8 +5,8 @@ const Shipment = require('../../model/Shipment');
 
 router.post('/newShipment', async (req, res) => {
   let {
+    productInfo,
     shipmentCode,
-    productCode,
     shipmentQuantity,
     shipmentUnitPrice,
     shipmentFrom,
@@ -24,8 +24,8 @@ router.post('/newShipment', async (req, res) => {
   } = req.body.newShipmentForm;
 
   const newShipment = new Shipment({
+    productInfo: productInfo,
     shipmentCode: shipmentCode,
-    productCode: productCode,
     shipmentQuantity: shipmentQuantity,
     shipmentUnitPrice: shipmentUnitPrice,
     shipmentFrom: shipmentFrom,
