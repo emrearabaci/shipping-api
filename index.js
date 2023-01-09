@@ -52,6 +52,8 @@ const searchShipmentRoute = require('./api/shipment/searchShipment');
 app.use('/api/shipment', searchShipmentRoute);
 const updateShipmentRoute = require('./api/shipment/updateShipment');
 app.use('/api/shipment', updateShipmentRoute);
+const filterShipmentRoute = require('./api/shipment/filterShipment');
+app.use('/api/shipment', filterShipmentRoute);
 
 // ON FIRE
 app.listen(process.env.PORT, () => {
