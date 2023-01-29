@@ -14,7 +14,6 @@ router.post('/newProduct', async (req, res) => {
     productNetMeasure,
     productGrossMeasure,
     productRawMaterial,
-    productStages,
     productDescriptions,
     productCreator,
     productUpdater
@@ -30,7 +29,6 @@ router.post('/newProduct', async (req, res) => {
     productNetMeasure: productNetMeasure,
     productGrossMeasure: productGrossMeasure,
     productRawMaterial: productRawMaterial,
-    productStages: productStages,
     productDescriptions: productDescriptions,
     productCreator: productCreator,
     productUpdater: productUpdater
