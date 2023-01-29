@@ -45,10 +45,6 @@ const productSchema = new mongoose.Schema({
     lowercase: true,
     required: false
   },
-  productStages: {
-    type: Array,
-    required: false
-  },
   productDescription: {
     type: String,
     lowercase: true,
